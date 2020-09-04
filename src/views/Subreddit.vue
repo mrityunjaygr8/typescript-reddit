@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container mx-auto py-1">
     <h2 class="text-2xl">{{ subreddit }}</h2>
     <reddit-post v-for="post in posts" :key="post.id" :post="post"/>
   </div>
