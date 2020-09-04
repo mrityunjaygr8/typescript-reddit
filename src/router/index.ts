@@ -3,6 +3,7 @@ import VueRouter, { RouteConfig } from 'vue-router';
 import About from '@/views/About.vue';
 import Homepage from '@/views/HomePage.vue';
 import Subreddit from '@/views/Subreddit.vue';
+import Comments from '@/views/Comments.vue';
 import Home from '../views/Home.vue';
 
 Vue.use(VueRouter);
@@ -14,19 +15,24 @@ const routes: Array<RouteConfig> = [
     component: Home,
   },
   {
-    path: '/about',
+    path: '/about/',
     name: 'About',
     component: About,
   },
   {
-    path: '/homepage',
+    path: '/homepage/',
     name: 'Homepage',
     component: Homepage,
   },
   {
-    path: '/r/:subreddit',
+    path: '/r/:subreddit/',
     name: 'Subreddit',
     component: Subreddit,
+  },
+  {
+    path: '/r/:subreddit/comments/:id/',
+    name: 'Comments',
+    component: Comments,
   },
 ];
 
